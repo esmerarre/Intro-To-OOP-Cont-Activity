@@ -51,6 +51,25 @@ def test_check_num_classes_empty():
     assert result == 0
     assert student.classes == classes
 
+def test_disply_classes():
+     #Arrange
+    name = "Xin"
+    grade = "Senior"
+    classes = ["Algebra", 
+                    "Writing", 
+                    "Contemporary Issues", 
+                    ]
+    student = Student(name, grade, classes)
+
+    #Act
+    result = student.display_classes()
+
+    #Assert
+    assert result == "Algebra, Writing, Contemporary Issues"
+                    
+    assert student.classes == classes
+
+
 
 
 
